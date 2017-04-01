@@ -14,6 +14,9 @@
 		1255EDB71E8DED8D00A2F437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1255EDB51E8DED8D00A2F437 /* LaunchScreen.storyboard */; };
 		1255EDC21E8DED8E00A2F437 /* WKImageEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255EDC11E8DED8E00A2F437 /* WKImageEditorTests.swift */; };
 		1255EDCD1E8DED8E00A2F437 /* WKImageEditorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255EDCC1E8DED8E00A2F437 /* WKImageEditorUITests.swift */; };
+		1255EDDB1E8DF18E00A2F437 /* WKImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255EDDA1E8DF18E00A2F437 /* WKImageExtension.swift */; };
+		1255EDDD1E8DFDE700A2F437 /* WKViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255EDDC1E8DFDE700A2F437 /* WKViewExtension.swift */; };
+		1255EDDF1E8DFF3E00A2F437 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1255EDDE1E8DFF3E00A2F437 /* CornerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		1255EDC81E8DED8E00A2F437 /* WKImageEditorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKImageEditorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1255EDCC1E8DED8E00A2F437 /* WKImageEditorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKImageEditorUITests.swift; sourceTree = "<group>"; };
 		1255EDCE1E8DED8E00A2F437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1255EDDA1E8DF18E00A2F437 /* WKImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKImageExtension.swift; sourceTree = "<group>"; };
+		1255EDDC1E8DFDE700A2F437 /* WKViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKViewExtension.swift; sourceTree = "<group>"; };
+		1255EDDE1E8DFF3E00A2F437 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		1255EDAB1E8DED8D00A2F437 /* WKImageEditor */ = {
 			isa = PBXGroup;
 			children = (
+				1255EDDC1E8DFDE700A2F437 /* WKViewExtension.swift */,
 				1255EDAC1E8DED8D00A2F437 /* AppDelegate.swift */,
 				1255EDAE1E8DED8D00A2F437 /* ViewController.swift */,
+				1255EDDA1E8DF18E00A2F437 /* WKImageExtension.swift */,
+				1255EDDE1E8DFF3E00A2F437 /* CornerView.swift */,
 				1255EDB01E8DED8D00A2F437 /* Main.storyboard */,
 				1255EDB31E8DED8D00A2F437 /* Assets.xcassets */,
 				1255EDB51E8DED8D00A2F437 /* LaunchScreen.storyboard */,
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1255EDDF1E8DFF3E00A2F437 /* CornerView.swift in Sources */,
 				1255EDAF1E8DED8D00A2F437 /* ViewController.swift in Sources */,
+				1255EDDB1E8DF18E00A2F437 /* WKImageExtension.swift in Sources */,
+				1255EDDD1E8DFDE700A2F437 /* WKViewExtension.swift in Sources */,
 				1255EDAD1E8DED8D00A2F437 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
