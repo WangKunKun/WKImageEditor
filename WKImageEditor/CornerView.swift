@@ -19,7 +19,9 @@ class CornerView: UIView {
     */
     
     var lineWidth:CGFloat {
-        didSet{}
+        didSet{
+            self.cornerShapeLayer.strokeColor = lineColor.cgColor
+        }
     }
     var lineColor:UIColor {
         didSet{
@@ -29,6 +31,11 @@ class CornerView: UIView {
     }
     
     var cornerPosition:WKCropAreaCornerPosition = .topLeft
+    {
+        didSet{
+            self.drawCornerLines()
+        }
+    }
     
     var relativeViewX:CornerView?
     var relativeViewY:CornerView?
@@ -79,6 +86,20 @@ class CornerView: UIView {
         cornerShapeLayer.path = path.cgPath
         self.layer.addSublayer(cornerShapeLayer)
         
+    }
+    
+    func updateSizeWithWidth(width:CGFloat, height:CGFloat)  {
+        switch self.cornerPosition {
+        case .topLeft:
+            self.frame = CGRect.init(x: self.wkTop, y: self.wkLeft, width: width, height: height)
+        case .topRight:
+            self.frame = CGRect.init(x: self.wkRight - width, y: self.wkLeft, width: width, height: height)
+        case .bottomLeft:
+            self.frame = CGRect.init(x: self.wkTop, y: self.wkBottom - height, width: width, height: height)
+        case .bottomRight:
+            self.frame = CGRect.init(x: self.wkRight - width, y: self.wkBottom - height, width: width, height: height)
+        }
+        self.drawCornerLines()
     }
     
 }
