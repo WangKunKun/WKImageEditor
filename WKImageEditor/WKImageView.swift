@@ -178,6 +178,53 @@ class WKImageView: UIView {
         cropAreaView.addGestureRecognizer(cropAreaPan)
     }
     
+    func commonInit()  {
+        self.setUp()
+        self.createCorners()
+        self.resetCropAreaOnCornersFrameChanged()
+        self.bindPanGestures()
+    }
+    
+    
+    //mark pan手势
+    
+    func handleCropAreaPinch(pinchGetsure:UIPinchGestureRecognizer) {
+        switch pinchGetsure.state {
+        case .began:
+            pinchOriSize = cropAreaView.frame.size
+        case .changed:
+            fallthrough
+        default:
+            break
+        }
+    }
+    
+    func handleMidPan(panGesture:UIPanGestureRecognizer)  {
+        let midLineView = panGesture.view as! MidLineView
+        switch panGesture.state {
+        case .began:
+            cropAreaOriFrame = cropAreaView.frame
+        case .changed:
+            let translation = panGesture.translation(in: cropAreaView)
+            switch midLineView.type {
+            case .top:
+                let minHeight = currentMinSpace + (cropAreaCornerHeight - cropAreaCornerLineWidth + cropAreaBorderLineWidth) * 2
+                let maxHeight = cropAreaOriFrame.maxY - (cropAreaCornerLineWidth - cropAreaBorderLineWidth)
+                let willHeight = min(max(minHeight, cropAreaOriFrame.height - translation.y), maxHeight)
+                let deltaY = willHeight - cropAreaOriFrame.height
+                cropAreaView.frame = CGRect.init(x: cropAreaOriFrame.minX, y: cropAreaOriFrame.minY - deltaY, width: cropAreaOriFrame.width, height: willHeight)
+                
+            case .bottom:
+                let minHeight = currentMinSpace + (cropAreaCornerHeight - cropAreaCornerLineWidth + cropAreaBorderLineWidth) * 2
+                let maxHeight = imageView.wkHeight
+            default:
+                break
+            }
+        default:
+            break
+        }
+    }
+    
     func handleCornerPan(panGesture:UIPanGestureRecognizer) {
         
     }
@@ -198,20 +245,14 @@ class WKImageView: UIView {
             let centerMinY = cropAreaView.wkHeight / 2.0 + self.cornerMargin * v
             let centerMaxY = imageView.wkHeight - cropAreaView.wkHeight / 2.0 - self.cornerMargin * v
             
-//            cropAreaView.center = CGPoint.init(x: , y: <#T##CGFloat#>)
+            cropAreaView.center = CGPoint.init(x: min(max(centerMinX, willCenter.x), centerMaxX) , y: min(max(centerMinY, willCenter.y), centerMaxY))
         default:
-            <#code#>
+            break
         }
         
     }
     
-    func commonInit()  {
-        self.setUp()
-        self.createCorners()
-        self.resetCropAreaOnCornersFrameChanged()
-        self.bindPanGestures()
-    }
-    
+
     deinit {
         cropAreaView.removeObserver(self, forKeyPath: "frame")
         cropAreaView.removeObserver(self, forKeyPath: "center")
