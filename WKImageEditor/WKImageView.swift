@@ -298,8 +298,11 @@ class WKImageView: UIView {
 
         
         //监听frame失效 因为cropareaView覆写了frame 所以监听失效 
-        //解决方案 1.不监听，修改的地方直接调用方法 2.闭包书写 让cropareaview复写时调用，效果不理想 摒弃
-        //解决方案 3.取消cropareaview的复写，所有相关这边来实现
+        /*解决方案    1.不监听，修改的地方直接调用方法
+                    2.闭包书写 让cropareaview复写时调用，效果不理想 摒弃
+                    3.取消cropareaview的复写，所有相关这边来实现
+        此处用的第三种方案
+         */
         cropAreaView.addObserver(self, forKeyPath: "frame", options: [.new,.initial], context: nil)
         cropAreaView.addObserver(self, forKeyPath: "bounds", options: [.new,.initial], context: nil)
         cropAreaView.addObserver(self, forKeyPath: "center", options: [.new,.initial], context: nil)
@@ -366,7 +369,6 @@ class WKImageView: UIView {
     func commonInit()  {
         
         self.setUp()
-//        self.createCorners() //提前了
         self.resetCropAreaOnCornersFrameChanged()
         self.bindPanGestures()
     }
@@ -464,8 +466,6 @@ class WKImageView: UIView {
         
         let tmpY = yFactor < 0 ? relativeViewX.center.y + cropAreaCornerHeight / 2.0 - self.cornerMargin * 2 + self.cornerMargin * fixValue : imageView.wkHeight - relativeViewX.center.y + cropAreaCornerHeight / 2.0 - self.cornerMargin * 2 + self.cornerMargin * fixValue
         
-        
-
         
         var spaceX = min(max((locationInImageView.x - relativeViewY.center.x) * xFactor + cropAreaCornerWidth - self.cornerMargin * 2,currentMinSpace + cropAreaCornerWidth * 2 - self.cornerMargin * 2), tmpX)
         
@@ -682,10 +682,7 @@ class WKImageView: UIView {
 
         
         let selfAspectRatio = self.wkWidth / self.wkHeight
-        
-        print("imageAR = \(imageAspectRatio)")
-        print("selfAspectRatio = \(selfAspectRatio)")
-        print(self.wkWidth)
+
         if imageAspectRatio > selfAspectRatio {
             paddingLeftRight = 0
             paddingTopBottom = floor((self.wkHeight - self.wkWidth / imageAspectRatio) / 2.0)
