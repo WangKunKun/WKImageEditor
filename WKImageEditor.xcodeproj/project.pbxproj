@@ -21,6 +21,7 @@
 		1865FA321EB583CB0081CA01 /* WKImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865FA2C1EB583CB0081CA01 /* WKImageExtension.swift */; };
 		1865FA331EB583CB0081CA01 /* WKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865FA2D1EB583CB0081CA01 /* WKImageView.swift */; };
 		1865FA341EB583CB0081CA01 /* WKViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865FA2E1EB583CB0081CA01 /* WKViewExtension.swift */; };
+		1865FA361EB591F80081CA01 /* WKPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865FA351EB591F80081CA01 /* WKPopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1865FA2C1EB583CB0081CA01 /* WKImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKImageExtension.swift; sourceTree = "<group>"; };
 		1865FA2D1EB583CB0081CA01 /* WKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKImageView.swift; sourceTree = "<group>"; };
 		1865FA2E1EB583CB0081CA01 /* WKViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKViewExtension.swift; sourceTree = "<group>"; };
+		1865FA351EB591F80081CA01 /* WKPopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				1865FA261EB57F0D0081CA01 /* 1.jpeg */,
 				1255EDAC1E8DED8D00A2F437 /* AppDelegate.swift */,
 				1255EDAE1E8DED8D00A2F437 /* ViewController.swift */,
+				1865FA351EB591F80081CA01 /* WKPopView.swift */,
 				1255EDB01E8DED8D00A2F437 /* Main.storyboard */,
 				1255EDB31E8DED8D00A2F437 /* Assets.xcassets */,
 				1255EDB51E8DED8D00A2F437 /* LaunchScreen.storyboard */,
@@ -294,6 +297,7 @@
 			files = (
 				1255EDAF1E8DED8D00A2F437 /* ViewController.swift in Sources */,
 				1865FA321EB583CB0081CA01 /* WKImageExtension.swift in Sources */,
+				1865FA361EB591F80081CA01 /* WKPopView.swift in Sources */,
 				1865FA341EB583CB0081CA01 /* WKViewExtension.swift in Sources */,
 				1865FA331EB583CB0081CA01 /* WKImageView.swift in Sources */,
 				1865FA301EB583CB0081CA01 /* CropAreaView.swift in Sources */,

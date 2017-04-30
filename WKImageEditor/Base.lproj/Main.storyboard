@@ -18,20 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9K8-ku-kk6">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="AEE-tr-AYO"/>
-                                    <constraint firstAttribute="width" constant="150" id="ydN-jc-LXq"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g65-Gk-i56">
-                                <frame key="frameInset" minX="172" minY="444" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clip"/>
-                                <connections>
-                                    <action selector="clip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i50-Z5-yF6"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ww-27-P1O" customClass="WKImageView" customModule="WKImageEditor" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -41,16 +27,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9K8-ku-kk6" secondAttribute="bottom" id="3Tb-eQ-CKR"/>
                             <constraint firstItem="9ww-27-P1O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BBk-C7-icr"/>
                             <constraint firstAttribute="trailing" secondItem="9ww-27-P1O" secondAttribute="trailing" id="HQU-Js-na6"/>
-                            <constraint firstItem="9K8-ku-kk6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NiV-v6-NCw"/>
                             <constraint firstItem="9ww-27-P1O" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gfU-Mc-vlY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="9ww-27-P1O" id="wLB-62-2fh"/>
-                        <outlet property="resultIV" destination="9K8-ku-kk6" id="W7z-2W-jCJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

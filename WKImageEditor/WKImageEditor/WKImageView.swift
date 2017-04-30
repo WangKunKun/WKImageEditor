@@ -665,10 +665,13 @@ class WKImageView: UIView {
     }
     
     func removeMidLines() {
+        
+        if topMidLine != nil && bottomMidLine != nil && leftMidLine != nil && rightMidLine != nil{
         topMidLine.removeFromSuperview()
         bottomMidLine.removeFromSuperview()
         leftMidLine.removeFromSuperview()
         rightMidLine.removeFromSuperview()
+        }
         
         topMidLine = nil
         bottomMidLine = nil
