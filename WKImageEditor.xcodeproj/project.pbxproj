@@ -20,6 +20,7 @@
 		127FD4DC1E973D5200A2CDD8 /* WKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127FD4DB1E973D5200A2CDD8 /* WKImageView.swift */; };
 		129D79201E95D73400922697 /* MidLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129D791F1E95D73400922697 /* MidLineView.swift */; };
 		129D79221E97262A00922697 /* CropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129D79211E97262A00922697 /* CropAreaView.swift */; };
+		1865FA271EB57F0D0081CA01 /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1865FA261EB57F0D0081CA01 /* 1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		127FD4DB1E973D5200A2CDD8 /* WKImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKImageView.swift; sourceTree = "<group>"; };
 		129D791F1E95D73400922697 /* MidLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidLineView.swift; sourceTree = "<group>"; };
 		129D79211E97262A00922697 /* CropAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaView.swift; sourceTree = "<group>"; };
+		1865FA261EB57F0D0081CA01 /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		1255EDAB1E8DED8D00A2F437 /* WKImageEditor */ = {
 			isa = PBXGroup;
 			children = (
+				1865FA261EB57F0D0081CA01 /* 1.jpeg */,
 				1255EDDC1E8DFDE700A2F437 /* WKViewExtension.swift */,
 				1255EDAC1E8DED8D00A2F437 /* AppDelegate.swift */,
 				1255EDAE1E8DED8D00A2F437 /* ViewController.swift */,
@@ -256,6 +259,7 @@
 				1255EDB71E8DED8D00A2F437 /* LaunchScreen.storyboard in Resources */,
 				1255EDB41E8DED8D00A2F437 /* Assets.xcassets in Resources */,
 				1255EDB21E8DED8D00A2F437 /* Main.storyboard in Resources */,
+				1865FA271EB57F0D0081CA01 /* 1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -425,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

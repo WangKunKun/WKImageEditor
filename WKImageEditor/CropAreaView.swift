@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class CropAreaView: UIView {
 
     /*
@@ -17,6 +20,7 @@ class CropAreaView: UIView {
         // Drawing code
     }
     */
+    
     
     var crossLineLayer = CAShapeLayer()
     var crossLineWidth:CGFloat = 0.5
@@ -63,31 +67,35 @@ class CropAreaView: UIView {
         self.createBorderLayer()
     }
     
-    override var frame: CGRect
-    {
-        didSet{
-//          var newFrame = frame
-//          super.frame = newFrame
-            if showCrossLines{
-                self.showCrossLineLayer()
-            }
-            self.resetBorderLayerPath()
-            
-        }
-    }
-    
-    override var bounds: CGRect
-    {
-        didSet{
-            if showCrossLines{
-                self.showCrossLineLayer()
-            }
-            self.resetBorderLayerPath()
-        }
-    }
+//    override var frame: CGRect
+//    {
+//        didSet{
+//            if showCrossLines{
+//                self.showCrossLineLayer()
+//            }
+//            self.resetBorderLayerPath()
+//        }
+//    }
+//    
+//    override var bounds: CGRect
+//    {
+//        didSet{
+//            if showCrossLines{
+//                self.showCrossLineLayer()
+//            }
+//            self.resetBorderLayerPath()
+//        }
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func resetAllLayer()  {
+        if showCrossLines{
+            self.showCrossLineLayer()
+        }
+        self.resetBorderLayerPath()
     }
     
     func showCrossLineLayer() {
