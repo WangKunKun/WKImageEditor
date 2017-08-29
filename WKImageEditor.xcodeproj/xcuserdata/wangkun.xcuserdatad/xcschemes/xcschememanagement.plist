@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>WKImageEditor.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1255EDA81E8DED8D00A2F437</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1255EDBC1E8DED8E00A2F437</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1255EDC71E8DED8E00A2F437</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

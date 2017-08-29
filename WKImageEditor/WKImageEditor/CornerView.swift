@@ -27,7 +27,6 @@ class CornerView: UIView {
         didSet{
             self.drawCornerLines()
         }
-        
     }
     
     var cornerPosition:WKCropAreaCornerPosition = .topLeft
